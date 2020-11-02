@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Assignment</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
+</head>
+<body>
+
+<div class="">
+<h1>Modify Car</h1>
+		<div class="view">
+			<a th:href="@{/}">Home</a>
+		</div>
+<form action="#" th:action="@{/modify}" th:object="${car}">	
+	<label>Make</label>      
+	<input type="text" name="" th:field="*{make}" required/><br/>
+	<label>Model</label>     
+	<input type="text" name="" th:field="*{model}" required/><br/>
+	<label>Colour</label>    
+	<input type="text" name="" th:field="*{colour}" required/><br/>
+	<label>Price</label> 
+     <input type="text" name="" th:field="*{price}" required/><br/>
+	<label>VIN</label> 
+     <input type="text" name="" th:field="*{VIN}" required/><br/>
+     <label>Dealership</label> 
+     <select th:field="*{dealership}">
+     <option th:each="d:*{dealerships}" th:text="${d}" th:value="${d}"/>
+     </select>
+	 <input type="hidden" name="id" th:value="${car.id}"/><br>
+	
+	 <input type="submit" value="Modify" class="submit" /><br/>
+	
+</form>
+
+<div class="view">
+<a th:href="@{/view}">View Cars</a><br/><br/>
+</div>
+
+</div>
+
+</body>
+</html>

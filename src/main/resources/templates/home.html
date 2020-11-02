@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Assignment</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
+	
+<style>
+ul {
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  width: 330px;
+  background-color: #f1f1f1;
+  border: 1px solid #C0C0C0;
+}
+
+li a {
+  display: block;
+  color: SteelBlue;
+  padding: 10px 40px;
+  text-decoration: none;
+  font-size:1.4rem;
+  text-align:right;
+}
+
+li {
+  text-align: center;
+  border-bottom: 1px solid #C0C0C0;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #4CAF50;
+  color: white;
+}
+
+</style>
+	
+</head>
+<body>
+
+<div class="">
+<h1>Car Management System</h1>
+
+<ul class="home">
+<li><a th:href="@{/add}" >Add Car</a></li>
+<li><a th:href="@{/view}" class="">View Car</a></li>
+<li><a th:href="@{/search}" >Search Car</a></li>
+<li><a th:href="@{/purchase}" >Purchase Car</a></li>
+
+</ul>
+
+</div>
+
+<script>
+
+/* var btns = document.getElementsByTagName("a");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  if (current.length > 0) { 
+ current[0].className = current[0].className.replace(" active", "");
+ 
+  }
+  this.className += " active";
+  });
+} */
+</script>
+
+</body>
+</html>

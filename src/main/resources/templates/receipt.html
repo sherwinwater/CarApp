@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Assignment</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/mycss.css" th:href="@{/css/mycss.css}" />
+</head>
+<body>
+
+	<div class="">
+		<h1>Your Receipt</h1>
+		<div class="view">
+			<a th:href="@{/}">Home</a>
+		</div>
+
+		<table class="receipt-table">
+			<tr>
+				<td colspan="2" class="carInfo">Car Information</td>
+			</tr>
+			<tr>
+				<td>Make</td>
+				<td th:text="${car.make}"></td>
+			</tr>
+			<tr>
+				<td>Model</td>
+				<td th:text="${car.model}"></td>
+			</tr>
+			<tr>
+				<td>Colour</td>
+				<td th:text="${car.colour}"></td>
+			</tr>
+			<tr>
+				<td>VIN</td>
+				<td th:text="${car.VIN}"></td>
+			</tr>
+			<tr>
+				<td>Dealership</td>
+				<td th:text="${car.dealership}"></td>
+			</tr>
+			<tr>
+				<td colspan="2" class="carPrice">Car Price</td>
+			</tr>
+			<tr>
+				<td>Price</td>
+				<td
+					th:text="'$'+${#numbers.formatDecimal(car.price, 5, 'COMMA', 2, 'POINT' )}"
+					class="price"></td>
+			</tr>
+			<tr>
+				<td>Taxes(13%)</td>
+				<td
+					th:text="'$'+${#numbers.formatDecimal(tax, 5, 'COMMA', 2, 'POINT' )}"
+					class="price"></td>
+			</tr>
+			<tr>
+				<td>Total Price</td>
+				<td
+					th:text="'$'+${#numbers.formatDecimal(totalPrice, 5, 'COMMA', 2, 'POINT' )}"
+					class="price"></td>
+			</tr>
+
+		</table>
+
+		<p>&#42 Price above is Canadian Dollar.</p>
+		<p th:text="${#temporals.format(localDateTime, 'HH:mm dd-MM-yyyy ')}"></p>
+
+
+	</div>
+
+</body>
+</html>

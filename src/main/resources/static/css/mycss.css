@@ -1,0 +1,147 @@
+h1{
+	color:purple;
+}
+h3{
+	color:cyan;
+}
+/* 
+.home li {
+	margin: 10px;
+	
+}
+
+ ul {
+	list-style-type:none;
+	text-align:right;
+	margin:auto;
+	width:400px;
+} */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align:center;
+}
+
+
+input, select{
+	display: inline-block;
+    float: left;
+  
+	margin:5px;
+	text-align:left;
+	width:150px;
+	padding:0px;
+	
+}
+select{
+	width:155px;
+}
+input[type=submit]{
+	background-color: purple;
+	color:white;
+}
+label { 
+	display: inline-block; 
+	width: 120px; 
+	text-align: right; 
+	margin:5px;
+	
+    float: left;
+    clear: left;
+   
+}
+
+.genre{
+	width:160px;
+}
+.submit {
+  display: block;
+  margin-left: 136px;
+  margin-bottom: 10px;
+  background-color: purple;
+  color:white;
+  cleat:both;
+  text-align:center;
+  font-size:1.1rem;
+}
+
+form {
+	margin: 0 auto;
+	width:400px;
+	text-align:center;
+}
+
+
+.view{
+	margin: 20px auto;
+	width:400px;
+	clear:both;
+}
+a{
+	text-decoration:none;
+	padding:5px;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.price{
+	text-align:right;
+}
+.receipt-table{
+	margin:auto;
+	width:280px;
+}
+.receipt-table tr:nth-child(even) {
+  background-color: white;
+}
+.carInfo{
+	background: #D1ECF1;
+	font-weight:bold;
+	text-align:center;
+}
+.carPrice{
+	background: #D4EDDA;
+	font-weight:bold;
+	text-align:center;
+	
+}
+
+.dealer-row{
+	font-weight:bold;
+	text-align:center;
+	font-size:1.5rem;
+	padding:0
+}
+.general{
+/* 	background: #CCE5FF;
+ */}
+.city{
+/* 	background: #F8D7DA;
+ */}
+.nation{
+background: #ffffff;
+}
+ 
+ .dealer-logo{
+ width:300px;
+ height:150px;
+ }
+ 
+ .city-logo{
+ width:300px;
+ height:90px;
+ padding:30px;
+ }
