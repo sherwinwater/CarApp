@@ -37,13 +37,14 @@ public class DatabaseConfig {
 	// conncet to postgresql
 	@Bean
 	public DataSource dataSource() {
-		System.out.println("connect");
 
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName(driver);
 		dataSource.setUrl(url);
 		dataSource.setUsername(user);
 		dataSource.setPassword(pwd);
+		
+		System.out.println("connect");
 		return dataSource;
 			
 	}
