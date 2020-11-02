@@ -2,6 +2,7 @@ package ca.sheridancollege.database;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -12,6 +13,20 @@ import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
 @Configuration
 public class DatabaseConfig {
 	
+	@Value("${spring.datasource.url}")
+	private String url;
+	
+	@Value("${spring.datasource.username}")
+	private String user;
+	
+	@Value("${spring.datasource.password}")
+	private String pwd;
+	
+	@Value("${spring.datasource.driverClassName}")
+	private String driver;
+	
+	
+	
 	//Used in our DatabaseAccess class to submit JDBC Query Strings
 	@Bean
 	public NamedParameterJdbcTemplate namedParameterJdbcTemplate(DataSource dataSource) {
@@ -19,19 +34,34 @@ public class DatabaseConfig {
 		return new NamedParameterJdbcTemplate(dataSource);
 	}
 	
-	// conncet to mysql
+	// conncet to postgresql
 	@Bean
 	public DataSource dataSource() {
 		System.out.println("connect");
 
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://localhost:3306/carapp?timeServerZone=UTC");
-		dataSource.setUsername("sam");
-		dataSource.setPassword("sam");
+		dataSource.setDriverClassName(driver);
+		dataSource.setUrl(url);
+		dataSource.setUsername(user);
+		dataSource.setPassword(pwd);
 		return dataSource;
 			
 	}
+//	// conncet to mysql
+//	@Bean
+//	public DataSource dataSource() {
+//		System.out.println("connect");
+//		
+//		DriverManagerDataSource dataSource = new DriverManagerDataSource();
+//		dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+//		dataSource.setUrl("jdbc:mysql://localhost:3306/carapp?timeServerZone=UTC");
+//		dataSource.setUsername("sam");
+//		dataSource.setPassword("sam");
+//		return dataSource;
+//		
+//	}
+	
+	
 //	public DataSource dataSource() {
 //		System.out.println("connect");
 //		
