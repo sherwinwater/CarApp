@@ -10,13 +10,13 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ca.sheridancollege.wanshuwe</groupId>
-	<artifactId>exercise6</artifactId>
+	<artifactId>carapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>exercise6</name>
+	<name>carapp</name>
 	<description>exercise</description>
 
 	<properties>
-		<java.version>15</java.version>
+		<java.version>8</java.version>
 	</properties>
 
 	<dependencies>
