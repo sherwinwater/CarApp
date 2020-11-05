@@ -148,6 +148,7 @@ public class CarController {
 		model.addAttribute("search",true);
 		model.addAttribute("localDateTime", LocalDateTime.now());
 		model.addAttribute("id","");
+
 		
 		return "searchcar.html";
 	}

@@ -1,5 +1,6 @@
 .nav a:hover {
-    background-color: #73B817;
+    /* background-color: #73B817; */
+    background-color: #0F8599;
     color: white;
     
   }
@@ -20,6 +21,9 @@
 height: 100vh;
 }
 
+a{
+  text-decoration: none;
+}
 
 .price{
 	text-align:right;
@@ -51,3 +55,12 @@ height: 100vh;
 .homebtn{
 	margin-left:100px;
 }
+#carousel1 img{
+	width:100vw;
+	height:89vh;
+}
+
+#carousel1row {
+	margin-right:-30px !important;
+}
+
